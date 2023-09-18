@@ -11,14 +11,17 @@ type GLTFResult = GLTF & {
 	nodes: {
 		Plane: THREE.Mesh;
 	};
-	materials: {};
 };
 
 export function Room(props: React.JSX.IntrinsicElements["group"]) {
-	const { nodes, materials } = useGLTF("./models/testRoom2.gltf") as GLTFResult;
+	const { nodes } = useGLTF("./models/testRoom2.gltf") as GLTFResult;
+	// DEBUG
+	console.log("Nodes = ", nodes);
 	return (
 		<group {...props} dispose={null}>
-			<mesh geometry={nodes.Plane.geometry} material={nodes.Plane.material} />
+			<mesh geometry={nodes.Plane.geometry}>
+				<meshLambertMaterial color={0xcdcdcd} />
+			</mesh>
 		</group>
 	);
 }

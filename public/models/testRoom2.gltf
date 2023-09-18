@@ -18,6 +18,22 @@
 			"name":"Plane"
 		}
 	],
+	"materials":[
+		{
+			"doubleSided":true,
+			"name":"Wall",
+			"pbrMetallicRoughness":{
+				"baseColorFactor":[
+					0.5596005320549011,
+					0.5229430198669434,
+					0.5389946699142456,
+					1
+				],
+				"metallicFactor":0,
+				"roughnessFactor":0.5
+			}
+		}
+	],
 	"meshes":[
 		{
 			"name":"Plane.001",
@@ -28,7 +44,8 @@
 						"NORMAL":1,
 						"TEXCOORD_0":2
 					},
-					"indices":3
+					"indices":3,
+					"material":0
 				}
 			]
 		}
