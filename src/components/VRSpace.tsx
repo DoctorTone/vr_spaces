@@ -17,6 +17,21 @@ const VRSpace = () => {
 	const lockRef = useRef(false);
 	const velocity = new THREE.Vector3();
 	const direction = new THREE.Vector3();
+	const _vector = new THREE.Vector3();
+
+	const moveRight = (distance: number, camera: THREE.Camera) => {
+		_vector.setFromMatrixColumn(camera.matrix, 0);
+
+		camera.position.addScaledVector(_vector, distance);
+	};
+
+	const moveForward = (distance: number, camera: THREE.Camera) => {
+		_vector.setFromMatrixColumn(camera.matrix, 0);
+
+		_vector.crossVectors(camera.up, _vector);
+
+		camera.position.addScaledVector(_vector, distance);
+	};
 
 	useFrame((state, delta) => {
 		const camera = state.camera;
@@ -34,8 +49,8 @@ const VRSpace = () => {
 				velocity.z -= direction.z * MOVEMENT_SPEED * delta;
 			if (directionRef.current.left || directionRef.current.right)
 				velocity.x -= direction.x * MOVEMENT_SPEED * delta;
-			camera.position.x += -velocity.x * delta;
-			camera.position.z += velocity.z * delta;
+			moveRight(-velocity.x * delta, camera);
+			moveForward(-velocity.z * delta, camera);
 		}
 	});
 
