@@ -1,11 +1,12 @@
-import { useEffect, useRef } from "react";
+import { MutableRefObject, useEffect, useRef } from "react";
 import { XR } from "@react-three/xr";
 import { PointerLockControls, Sky } from "@react-three/drei";
-// import * as THREE from "three";
+import * as THREE from "three";
 import { useFrame } from "@react-three/fiber";
 import Floor from "../models/Floor";
 import { Room } from "../models/Room";
 
+const MOVEMENT_SPEED = 50;
 const VRSpace = () => {
 	const directionRef = useRef({
 		forward: false,
@@ -14,11 +15,27 @@ const VRSpace = () => {
 		right: false,
 	});
 	const lockRef = useRef(false);
+	const velocity = new THREE.Vector3();
+	const direction = new THREE.Vector3();
 
-	useFrame((state) => {
-		// DEBUG
+	useFrame((state, delta) => {
+		const camera = state.camera;
 		if (lockRef.current) {
-			console.log("Locked...");
+			velocity.x -= velocity.x * 10.0 * delta;
+			velocity.z -= velocity.z * 10.0 * delta;
+			direction.z =
+				Number(directionRef.current.forward) -
+				Number(directionRef.current.backward);
+			direction.x =
+				Number(directionRef.current.right) - Number(directionRef.current.left);
+			direction.normalize(); // this ensures consistent movements in all directions
+
+			if (directionRef.current.forward || directionRef.current.backward)
+				velocity.z -= direction.z * MOVEMENT_SPEED * delta;
+			if (directionRef.current.left || directionRef.current.right)
+				velocity.x -= direction.x * MOVEMENT_SPEED * delta;
+			camera.position.x += -velocity.x * delta;
+			camera.position.z += velocity.z * delta;
 		}
 	});
 
