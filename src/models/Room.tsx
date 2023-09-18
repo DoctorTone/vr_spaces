@@ -15,8 +15,7 @@ type GLTFResult = GLTF & {
 
 export function Room(props: React.JSX.IntrinsicElements["group"]) {
 	const { nodes } = useGLTF("./models/testRoom2.gltf") as GLTFResult;
-	// DEBUG
-	console.log("Nodes = ", nodes);
+
 	return (
 		<group {...props} dispose={null}>
 			<mesh geometry={nodes.Plane.geometry}>

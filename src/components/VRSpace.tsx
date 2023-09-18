@@ -128,7 +128,7 @@ const VRSpace = () => {
 				<Floor />
 				<ambientLight />
 				<pointLight position={[0, 10, 0]} />
-				<Room />
+				<Room scale={[3, 1.5, 3]} />
 			</XR>
 			<PointerLockControls onLock={pointerLocked} onUnlock={pointerUnlocked} />
 		</>

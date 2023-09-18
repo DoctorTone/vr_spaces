@@ -1,5 +1,5 @@
 const SCENE = {
-	cameraPosition: [0, 1.7, 3],
+	camPosition: [0, 1.7, 3],
 };
 
 export { SCENE };
