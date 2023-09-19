@@ -1,5 +1,8 @@
+import * as THREE from "three";
+
 const SCENE = {
-	camPosition: [0, 1.7, 11],
+	camPosition: new THREE.Vector3(-11, 1.7, 0),
+	lightPosition: new THREE.Vector3(4, 6, -1),
 };
 
 export { SCENE };

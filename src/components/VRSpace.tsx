@@ -2,9 +2,10 @@ import { MutableRefObject, useEffect, useRef } from "react";
 import { XR } from "@react-three/xr";
 import { PointerLockControls, Sky } from "@react-three/drei";
 import * as THREE from "three";
+import { SCENE } from "../state/Config";
 import { useFrame } from "@react-three/fiber";
 import Floor from "../models/Floor";
-import { Room } from "../models/Room";
+import { ShowRoom } from "../models/ShowRoom";
 import Roof from "../models/Roof";
 
 const MOVEMENT_SPEED = 50;
@@ -36,6 +37,8 @@ const VRSpace = () => {
 
 	useFrame((state, delta) => {
 		const camera = state.camera;
+		// DEBUG
+		// console.log("Camera = ", camera.position);
 		if (lockRef.current) {
 			velocity.x -= velocity.x * 10.0 * delta;
 			velocity.z -= velocity.z * 10.0 * delta;
@@ -127,10 +130,9 @@ const VRSpace = () => {
 			<XR>
 				<Sky />
 				<Floor />
-				<ambientLight />
-				<pointLight position={[0, 10, 0]} />
-				<Room scale={[3, 1.5, 3]} />
-				<Roof position={[0, 4.25, 0]} />
+				<ambientLight intensity={0.25} />
+				<pointLight position={SCENE.lightPosition} />
+				<ShowRoom />
 			</XR>
 			<PointerLockControls onLock={pointerLocked} onUnlock={pointerUnlocked} />
 		</>
