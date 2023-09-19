@@ -99,10 +99,9 @@ export function ShowRoom(props: JSX.IntrinsicElements["group"]) {
 							geometry={nodes.Window_Panel002_1.geometry}
 							material={materials.Window_outside}
 						/>
-						<mesh
-							geometry={nodes.Window_Panel002_2.geometry}
-							material={materials.Window_glass}
-						/>
+						<mesh geometry={nodes.Window_Panel002_2.geometry}>
+							<meshStandardMaterial transparent={true} opacity={0.5} />
+						</mesh>
 					</group>
 					<group position={[3.481, -3.766, 2.739]}>
 						<mesh
@@ -113,10 +112,9 @@ export function ShowRoom(props: JSX.IntrinsicElements["group"]) {
 							geometry={nodes.Window_Panel003_1.geometry}
 							material={materials.Window_outside}
 						/>
-						<mesh
-							geometry={nodes.Window_Panel003_2.geometry}
-							material={materials.Window_glass}
-						/>
+						<mesh geometry={nodes.Window_Panel003_2.geometry}>
+							<meshStandardMaterial transparent={true} opacity={0.5} />
+						</mesh>
 					</group>
 					<mesh
 						geometry={nodes.Window001_0.geometry}
@@ -130,10 +128,9 @@ export function ShowRoom(props: JSX.IntrinsicElements["group"]) {
 						geometry={nodes.Window001_2.geometry}
 						material={materials.Window_metal}
 					/>
-					<mesh
-						geometry={nodes.Window001_3.geometry}
-						material={materials.Window_stone}
-					/>
+					<mesh geometry={nodes.Window001_3.geometry}>
+						<meshStandardMaterial transparent={true} opacity={0.5} />
+					</mesh>
 				</group>
 				<mesh
 					geometry={nodes.Cube013_0.geometry}
@@ -164,11 +161,9 @@ export function ShowRoom(props: JSX.IntrinsicElements["group"]) {
 					material={wallMaterial}
 					position={[0, -0.389, 1.986]}
 				/>
-				<mesh
-					geometry={nodes.Cube020_0.geometry}
-					material={materials.Plastic}
-					position={[0, -0.389, 2.309]}
-				/>
+				<mesh geometry={nodes.Cube020_0.geometry} position={[0, -0.389, 2.309]}>
+					<meshStandardMaterial color={0xffffff} roughness={0.917} />
+				</mesh>
 				<mesh
 					geometry={nodes.Cube021_0.geometry}
 					material={wallMaterial}
