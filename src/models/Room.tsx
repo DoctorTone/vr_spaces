@@ -14,7 +14,7 @@ type GLTFResult = GLTF & {
 };
 
 export function Room(props: JSX.IntrinsicElements["group"]) {
-	const { nodes, materials } = useGLTF("./models/mainRoom.gltf") as GLTFResult;
+	const { nodes } = useGLTF("./models/mainRoom.gltf") as GLTFResult;
 	return (
 		<group {...props} dispose={null}>
 			<mesh geometry={nodes.Room.geometry} scale={[6, 1, 6]}>
