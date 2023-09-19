@@ -5,6 +5,7 @@ import * as THREE from "three";
 import { useFrame } from "@react-three/fiber";
 import Floor from "../models/Floor";
 import { Room } from "../models/Room";
+import Roof from "../models/Roof";
 
 const MOVEMENT_SPEED = 50;
 const VRSpace = () => {
@@ -129,6 +130,7 @@ const VRSpace = () => {
 				<ambientLight />
 				<pointLight position={[0, 10, 0]} />
 				<Room scale={[3, 1.5, 3]} />
+				<Roof position={[0, 4.5, 0]} />
 			</XR>
 			<PointerLockControls onLock={pointerLocked} onUnlock={pointerUnlocked} />
 		</>
