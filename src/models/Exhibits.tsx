@@ -5,6 +5,7 @@ import { Architecture } from "./Architecture";
 import { Video } from "./Video";
 import { Education } from "./Education";
 import { Games } from "./Games";
+import { Advertising } from "./Advertising";
 
 const Exhibits = () => {
 	return (
@@ -38,6 +39,9 @@ const Exhibits = () => {
 			</group>
 			<group>
 				<Games position={[6.4, 1.25, 2.9]} scale={0.1} />
+			</group>
+			<group>
+				<Advertising position={[7.4, 1.1, 2.9]} rotation-z={-Math.PI / 12} />
 			</group>
 		</group>
 	);
