@@ -40,7 +40,7 @@ const VRSpace = () => {
 	useFrame((state, delta) => {
 		const camera = state.camera;
 		// DEBUG
-		console.log("Camera = ", camera.position);
+		// console.log("Camera = ", camera.position);
 		if (lockRef.current) {
 			velocity.x -= velocity.x * 10.0 * delta;
 			velocity.z -= velocity.z * 10.0 * delta;
