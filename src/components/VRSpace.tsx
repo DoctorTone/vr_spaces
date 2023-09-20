@@ -8,6 +8,7 @@ import Floor from "../models/Floor";
 import { ShowRoom } from "../models/ShowRoom";
 import Roof from "../models/Roof";
 import Ground from "../models/Ground";
+import Exhibits from "../models/Exhibits";
 
 const MOVEMENT_SPEED = 50;
 const VRSpace = () => {
@@ -136,6 +137,7 @@ const VRSpace = () => {
 				<pointLight position={SCENE.pointLight1} />
 				<pointLight position={SCENE.pointLight2} />
 				<ShowRoom />
+				<Exhibits />
 			</XR>
 			<PointerLockControls onLock={pointerLocked} onUnlock={pointerUnlocked} />
 		</>

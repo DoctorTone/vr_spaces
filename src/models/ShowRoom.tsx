@@ -52,9 +52,10 @@ export function ShowRoom(props: JSX.IntrinsicElements["group"]) {
 	const { nodes, materials } = useGLTF(
 		"./models/latestRoom.gltf"
 	) as GLTFResult;
+	const texture = useTexture("./textures/marble.jpg");
 
 	const wallMaterial = new THREE.MeshStandardMaterial({
-		color: 0xc4c3ba,
+		color: 0xe1dbb7,
 		roughness: 0.3,
 		metalness: 0.6,
 	});
@@ -122,16 +123,12 @@ export function ShowRoom(props: JSX.IntrinsicElements["group"]) {
 					</group>
 					<mesh geometry={nodes.Window001_0.geometry} material={windowInside} />
 				</group>
-				<mesh
-					geometry={nodes.Cube013_0.geometry}
-					material={wallMaterial}
-					position={[0, -1.198, 1.986]}
-				/>
-				<mesh
-					geometry={nodes.Cube014_0.geometry}
-					material={wallMaterial}
-					position={[0, -0.389, 1.986]}
-				/>
+				<mesh geometry={nodes.Cube013_0.geometry} position={[0, -1.198, 1.986]}>
+					<meshStandardMaterial color={0x666666} />
+				</mesh>
+				<mesh geometry={nodes.Cube014_0.geometry} position={[0, -0.389, 1.986]}>
+					<meshStandardMaterial color={0x333333} />
+				</mesh>
 				<mesh geometry={nodes.Cube015_0.geometry} position={[0, -0.389, 2.309]}>
 					<meshStandardMaterial color={0xc4c3ba} metalness={0} roughness={1} />
 				</mesh>
