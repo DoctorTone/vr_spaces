@@ -86,7 +86,7 @@ type GLTFResult = GLTF & {
 export function Lotus(props: JSX.IntrinsicElements["group"]) {
 	const { nodes, materials } = useGLTF("./models/Lotus.gltf") as GLTFResult;
 	return (
-		<group {...props} dispose={null}>
+		<group visible={true} {...props} dispose={null}>
 			<mesh
 				castShadow
 				receiveShadow
