@@ -52,10 +52,16 @@ export function ShowRoom(props: JSX.IntrinsicElements["group"]) {
 	const { nodes, materials } = useGLTF(
 		"./models/latestRoom.gltf"
 	) as GLTFResult;
+
 	const wallMaterial = new THREE.MeshStandardMaterial({
 		color: 0xc4c3ba,
-		roughness: 0.4,
+		roughness: 0.3,
 		metalness: 0.6,
+	});
+	const windowInside = new THREE.MeshStandardMaterial({
+		color: 0xababab,
+		roughness: 1,
+		metalness: 0.25,
 	});
 
 	return (
@@ -66,34 +72,32 @@ export function ShowRoom(props: JSX.IntrinsicElements["group"]) {
 					rotation={[0, 0, Math.PI / 2]}
 					scale={[0.524, 3.336, 0.524]}
 				>
-					<mesh
-						geometry={nodes.Cylinder002_0.geometry}
-						material={wallMaterial}
-					/>
-					<mesh
-						geometry={nodes.Cylinder002_1.geometry}
-						material={materials.Light_2}
-					/>
+					<mesh geometry={nodes.Cylinder002_0.geometry}>
+						<meshStandardMaterial
+							color={0xcfbfbf}
+							roughness={0.25}
+							metalness={1}
+						/>
+					</mesh>
 				</group>
 				<group
 					position={[0, -0.389, 2.309]}
 					rotation={[0, 0, Math.PI / 2]}
 					scale={[0.524, 3.336, 0.524]}
 				>
-					<mesh
-						geometry={nodes.Cylinder003_0.geometry}
-						material={wallMaterial}
-					/>
-					<mesh
-						geometry={nodes.Cylinder003_1.geometry}
-						material={materials.Light}
-					/>
+					<mesh geometry={nodes.Cylinder003_0.geometry}>
+						<meshStandardMaterial
+							color={0xcfbfbf}
+							roughness={0.25}
+							metalness={1}
+						/>
+					</mesh>
 				</group>
 				<group position={[-3.481, 3.377, -0.43]}>
 					<group position={[3.481, -3.766, 2.739]}>
 						<mesh
 							geometry={nodes.Window_Panel002_0.geometry}
-							material={materials.Window_inside}
+							material={windowInside}
 						/>
 						<mesh
 							geometry={nodes.Window_Panel002_1.geometry}
@@ -106,7 +110,7 @@ export function ShowRoom(props: JSX.IntrinsicElements["group"]) {
 					<group position={[3.481, -3.766, 2.739]}>
 						<mesh
 							geometry={nodes.Window_Panel003_0.geometry}
-							material={materials.Window_inside}
+							material={windowInside}
 						/>
 						<mesh
 							geometry={nodes.Window_Panel003_1.geometry}
@@ -116,21 +120,7 @@ export function ShowRoom(props: JSX.IntrinsicElements["group"]) {
 							<meshStandardMaterial transparent={true} opacity={0.5} />
 						</mesh>
 					</group>
-					<mesh
-						geometry={nodes.Window001_0.geometry}
-						material={materials.Window_inside}
-					/>
-					<mesh
-						geometry={nodes.Window001_1.geometry}
-						material={materials.Window_outside}
-					/>
-					<mesh
-						geometry={nodes.Window001_2.geometry}
-						material={materials.Window_metal}
-					/>
-					<mesh geometry={nodes.Window001_3.geometry}>
-						<meshStandardMaterial transparent={true} opacity={0.5} />
-					</mesh>
+					<mesh geometry={nodes.Window001_0.geometry} material={windowInside} />
 				</group>
 				<mesh
 					geometry={nodes.Cube013_0.geometry}
@@ -142,11 +132,9 @@ export function ShowRoom(props: JSX.IntrinsicElements["group"]) {
 					material={wallMaterial}
 					position={[0, -0.389, 1.986]}
 				/>
-				<mesh
-					geometry={nodes.Cube015_0.geometry}
-					material={wallMaterial}
-					position={[0, -0.389, 2.309]}
-				/>
+				<mesh geometry={nodes.Cube015_0.geometry} position={[0, -0.389, 2.309]}>
+					<meshStandardMaterial color={0xc4c3ba} metalness={0} roughness={1} />
+				</mesh>
 				<mesh geometry={nodes.Cube016_0.geometry} position={[0, -0.389, 2.309]}>
 					<meshStandardMaterial color={0x363636} roughness={0.64} />
 				</mesh>
@@ -169,11 +157,9 @@ export function ShowRoom(props: JSX.IntrinsicElements["group"]) {
 					material={wallMaterial}
 					position={[0, -0.389, 2.309]}
 				/>
-				<mesh
-					geometry={nodes.Cube022_0.geometry}
-					material={wallMaterial}
-					position={[0, -0.389, 2.309]}
-				/>
+				<mesh geometry={nodes.Cube022_0.geometry} position={[0, -0.389, 2.309]}>
+					<meshStandardMaterial color={0xc4c3ba} metalness={0} roughness={1} />
+				</mesh>
 				<mesh
 					geometry={nodes.Cube024_1.geometry}
 					position={[0, -0.389, 2.309]}

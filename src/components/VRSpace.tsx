@@ -7,6 +7,7 @@ import { useFrame } from "@react-three/fiber";
 import Floor from "../models/Floor";
 import { ShowRoom } from "../models/ShowRoom";
 import Roof from "../models/Roof";
+import Ground from "../models/Ground";
 
 const MOVEMENT_SPEED = 50;
 const VRSpace = () => {
@@ -129,7 +130,8 @@ const VRSpace = () => {
 		<>
 			<XR>
 				<Sky />
-				<Floor />
+				<Floor position-z={2} />
+				<Ground position-y={-0.1} />
 				<ambientLight intensity={0.25} />
 				<pointLight position={SCENE.pointLight1} />
 				<pointLight position={SCENE.pointLight2} />
