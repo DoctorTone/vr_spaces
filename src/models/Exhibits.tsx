@@ -14,6 +14,15 @@ const Exhibits = () => {
 	return (
 		<group>
 			<group>
+				<Text
+					position={[0, 2.5, 6.15]}
+					rotation-y={Math.PI}
+					fontSize={0.5}
+					color={0x333333}
+					textAlign="center"
+				>
+					Showroom
+				</Text>
 				<Lotus
 					position={[0, 0, 3.5]}
 					scale={0.65}
