@@ -84,7 +84,7 @@ export function Lotus(props: JSX.IntrinsicElements["group"]) {
 				geometry={nodes.BackCover.geometry}
 				material={materials.Black}
 				position={[-0.023, 1.741, -2.045]}
-				scale={[0.76, 1, 0.57]}
+				scale={[0.76, 1, 0.8]}
 			/>
 			<mesh
 				geometry={nodes["wheelBL#details_normal#LOD2"].geometry}
@@ -239,11 +239,18 @@ export function Lotus(props: JSX.IntrinsicElements["group"]) {
 			/>
 			<mesh
 				geometry={nodes["chassis#glass#LOD2"].geometry}
-				material={materials["Default.004"]}
 				position={[-0.12, 0.341, -1.874]}
 				rotation={[Math.PI, 0, Math.PI]}
 				scale={11.918}
-			/>
+			>
+				<meshStandardMaterial
+					color={0x000000}
+					roughness={0}
+					metalness={1}
+					transparent={true}
+					opacity={0.85}
+				/>
+			</mesh>
 			<mesh
 				geometry={nodes["chassis#roof#LOD2"].geometry}
 				material={materials["Default.001"]}
@@ -431,18 +438,32 @@ export function Lotus(props: JSX.IntrinsicElements["group"]) {
 			/>
 			<mesh
 				geometry={nodes["glass#glass#LOD2"].geometry}
-				material={materials["Default.004"]}
 				position={[-0.12, 0.274, 2.202]}
 				rotation={[Math.PI, 0, Math.PI]}
 				scale={11.918}
-			/>
+			>
+				<meshStandardMaterial
+					color={0x000000}
+					roughness={0}
+					metalness={1}
+					transparent={true}
+					opacity={0.85}
+				/>
+			</mesh>
 			<mesh
 				geometry={nodes["glass_detachable#glass#LOD2"].geometry}
-				material={materials["Default.004"]}
 				position={[-0.12, 0.274, 2.202]}
 				rotation={[Math.PI, 0, Math.PI]}
 				scale={11.918}
-			/>
+			>
+				<meshStandardMaterial
+					color={0x000000}
+					roughness={0}
+					metalness={1}
+					transparent={true}
+					opacity={0.85}
+				/>
+			</mesh>
 			<mesh
 				geometry={nodes["detach_trunk_45#tiled_carbon#LOD2"].geometry}
 				material={materials["Default.002"]}
