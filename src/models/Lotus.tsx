@@ -80,6 +80,10 @@ export function Lotus(props: JSX.IntrinsicElements["group"]) {
 	const { nodes, materials } = useGLTF("./models/Lotus.gltf") as GLTFResult;
 	return (
 		<group {...props} dispose={null}>
+			<mesh position={[0, 1.25, 0]}>
+				<boxGeometry args={[2.5, 0.5, 4]} />
+				<meshBasicMaterial color={0x000000} />
+			</mesh>
 			<mesh
 				geometry={nodes.BackCover.geometry}
 				material={materials.Black}
