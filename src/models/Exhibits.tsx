@@ -85,15 +85,59 @@ const Exhibits = () => {
 				<Education position={[-6.35, 1.2, 3]} rotation-x={-Math.PI / 4} />
 			</group>
 			<group>
+				<Billboard
+					position={[6.4, 1.65, 2.9]}
+					follow={true}
+					lockX={false}
+					lockY={false}
+					lockZ={false} // Lock the rotation on the z axis (default=false)
+				>
+					<Text fontSize={0.1} color={0x333333} textAlign="center">
+						Games
+					</Text>
+				</Billboard>
 				<Games position={[6.4, 1.25, 2.9]} scale={0.1} />
 			</group>
 			<group>
+				<Billboard
+					position={[7.4, 1.75, 2.9]}
+					follow={true}
+					lockX={false}
+					lockY={false}
+					lockZ={false} // Lock the rotation on the z axis (default=false)
+				>
+					<Text fontSize={0.1} color={0x333333} textAlign="center">
+						Advertising
+					</Text>
+				</Billboard>
 				<Advertising position={[7.4, 1.1, 2.9]} rotation-z={-Math.PI / 12} />
 			</group>
 			<group>
+				<Billboard
+					position={[8.4, 1.65, 2.9]}
+					follow={true}
+					lockX={false}
+					lockY={false}
+					lockZ={false} // Lock the rotation on the z axis (default=false)
+				>
+					<Text fontSize={0.1} color={0x333333} textAlign="center">
+						Health
+					</Text>
+				</Billboard>
 				<Health position={[8.4, 1.3, 2.9]} scale={1} />
 			</group>
 			<group>
+				<Billboard
+					position={[9.4, 1.55, 2.9]}
+					follow={true}
+					lockX={false}
+					lockY={false}
+					lockZ={false} // Lock the rotation on the z axis (default=false)
+				>
+					<Text fontSize={0.1} color={0x333333} textAlign="center">
+						Music
+					</Text>
+				</Billboard>
 				<Music position={[9.4, 1.2, 2.9]} scale={0.0005} />
 			</group>
 		</group>
