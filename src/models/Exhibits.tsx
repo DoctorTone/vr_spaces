@@ -1,4 +1,3 @@
-import React from "react";
 import { Lotus } from "./Lotus";
 import { Art } from "./Art";
 import { Architecture } from "./Architecture";
