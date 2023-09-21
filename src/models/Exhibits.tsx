@@ -8,6 +8,7 @@ import { Games } from "./Games";
 import { Advertising } from "./Advertising";
 import { Health } from "./Health";
 import { Music } from "./Music";
+import { Billboard, Text } from "@react-three/drei";
 
 const Exhibits = () => {
 	return (
@@ -20,6 +21,17 @@ const Exhibits = () => {
 				/>
 			</group>
 			<group>
+				<Billboard
+					position={[-9.4, 2, 3]}
+					follow={true}
+					lockX={false}
+					lockY={false}
+					lockZ={false} // Lock the rotation on the z axis (default=false)
+				>
+					<Text fontSize={0.1} color={0x333333} textAlign="center">
+						Art
+					</Text>
+				</Billboard>
 				<Art
 					position={[-9.4, 1, 3]}
 					scale={[0.03, 0.03, 0.03]}
@@ -27,6 +39,17 @@ const Exhibits = () => {
 				/>
 			</group>
 			<group>
+				<Billboard
+					position={[-8.4, 1.6, 3]}
+					follow={true}
+					lockX={false}
+					lockY={false}
+					lockZ={false} // Lock the rotation on the z axis (default=false)
+				>
+					<Text fontSize={0.1} color={0x333333} textAlign="center">
+						Architecture
+					</Text>
+				</Billboard>
 				<Architecture
 					position={[-8.4, 1, 3]}
 					rotation-y={Math.PI}
@@ -34,9 +57,31 @@ const Exhibits = () => {
 				/>
 			</group>
 			<group>
+				<Billboard
+					position={[-7.35, 1.6, 3]}
+					follow={true}
+					lockX={false}
+					lockY={false}
+					lockZ={false} // Lock the rotation on the z axis (default=false)
+				>
+					<Text fontSize={0.1} color={0x333333} textAlign="center">
+						Film
+					</Text>
+				</Billboard>
 				<Video position={[-7.35, 1.25, 3]} rotation-y={Math.PI} />
 			</group>
 			<group>
+				<Billboard
+					position={[-6.35, 1.55, 3]}
+					follow={true}
+					lockX={false}
+					lockY={false}
+					lockZ={false} // Lock the rotation on the z axis (default=false)
+				>
+					<Text fontSize={0.1} color={0x333333} textAlign="center">
+						Education
+					</Text>
+				</Billboard>
 				<Education position={[-6.35, 1.2, 3]} rotation-x={-Math.PI / 4} />
 			</group>
 			<group>
