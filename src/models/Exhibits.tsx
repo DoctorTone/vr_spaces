@@ -13,6 +13,22 @@ import { Billboard, Text } from "@react-three/drei";
 const Exhibits = () => {
 	return (
 		<group>
+			<mesh position={[-10.7, 1, 3.305]}>
+				<boxGeometry args={[1.35, 2.5, 0.1]} />
+				<meshStandardMaterial
+					color={0xe1dbb7}
+					roughness={0.3}
+					metalness={0.6}
+				/>
+			</mesh>
+			<mesh position={[10.7, 1, 3.305]}>
+				<boxGeometry args={[1.35, 2.5, 0.1]} />
+				<meshStandardMaterial
+					color={0xe1dbb7}
+					roughness={0.3}
+					metalness={0.6}
+				/>
+			</mesh>
 			<group>
 				<Text
 					position={[0, 2.5, 6.15]}
@@ -35,7 +51,7 @@ const Exhibits = () => {
 					follow={true}
 					lockX={false}
 					lockY={false}
-					lockZ={false} // Lock the rotation on the z axis (default=false)
+					lockZ={false}
 				>
 					<Text fontSize={0.1} color={0x333333} textAlign="center">
 						Art
@@ -53,7 +69,7 @@ const Exhibits = () => {
 					follow={true}
 					lockX={false}
 					lockY={false}
-					lockZ={false} // Lock the rotation on the z axis (default=false)
+					lockZ={false}
 				>
 					<Text fontSize={0.1} color={0x333333} textAlign="center">
 						Architecture
@@ -71,7 +87,7 @@ const Exhibits = () => {
 					follow={true}
 					lockX={false}
 					lockY={false}
-					lockZ={false} // Lock the rotation on the z axis (default=false)
+					lockZ={false}
 				>
 					<Text fontSize={0.1} color={0x333333} textAlign="center">
 						Film
@@ -85,7 +101,7 @@ const Exhibits = () => {
 					follow={true}
 					lockX={false}
 					lockY={false}
-					lockZ={false} // Lock the rotation on the z axis (default=false)
+					lockZ={false}
 				>
 					<Text fontSize={0.1} color={0x333333} textAlign="center">
 						Education
@@ -99,7 +115,7 @@ const Exhibits = () => {
 					follow={true}
 					lockX={false}
 					lockY={false}
-					lockZ={false} // Lock the rotation on the z axis (default=false)
+					lockZ={false}
 				>
 					<Text fontSize={0.1} color={0x333333} textAlign="center">
 						Games
@@ -113,7 +129,7 @@ const Exhibits = () => {
 					follow={true}
 					lockX={false}
 					lockY={false}
-					lockZ={false} // Lock the rotation on the z axis (default=false)
+					lockZ={false}
 				>
 					<Text fontSize={0.1} color={0x333333} textAlign="center">
 						Advertising
@@ -127,7 +143,7 @@ const Exhibits = () => {
 					follow={true}
 					lockX={false}
 					lockY={false}
-					lockZ={false} // Lock the rotation on the z axis (default=false)
+					lockZ={false}
 				>
 					<Text fontSize={0.1} color={0x333333} textAlign="center">
 						Health
@@ -141,7 +157,7 @@ const Exhibits = () => {
 					follow={true}
 					lockX={false}
 					lockY={false}
-					lockZ={false} // Lock the rotation on the z axis (default=false)
+					lockZ={false}
 				>
 					<Text fontSize={0.1} color={0x333333} textAlign="center">
 						Music
