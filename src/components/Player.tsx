@@ -13,9 +13,11 @@ const Player = () => {
 		right: false,
 	});
 	const lockRef = useRef(false);
+	const collisionObjects: THREE.Mesh[] = [];
 	const velocity = new THREE.Vector3();
 	const direction = new THREE.Vector3();
 	const _vector = new THREE.Vector3();
+	const lastCamPosition = new THREE.Vector3();
 	const scene = useThree((state) => state.scene);
 
 	const moveRight = (distance: number, camera: THREE.Camera) => {
@@ -43,6 +45,7 @@ const Player = () => {
 		const camera = state.camera;
 		// DEBUG
 		// console.log("Camera = ", camera.position);
+		lastCamPosition.copy(camera.position);
 		if (lockRef.current) {
 			velocity.x -= velocity.x * 10.0 * delta;
 			velocity.z -= velocity.z * 10.0 * delta;
@@ -59,10 +62,13 @@ const Player = () => {
 				velocity.x -= direction.x * MOVEMENT_SPEED * delta;
 			moveRight(-velocity.x * delta, camera);
 			moveForward(-velocity.z * delta, camera);
-			const obj = scene.getObjectByName("Boxy") as THREE.Mesh;
+			const obj = collisionObjects[0];
 			if (obj) {
 				if (obj.geometry.boundingBox!.containsPoint(camera.position)) {
 					console.log("Hit it");
+					camera.position.copy(lastCamPosition);
+				} else {
+					lastCamPosition.copy(camera.position);
 				}
 			}
 		}
@@ -125,10 +131,12 @@ const Player = () => {
 	useEffect(() => {
 		document.addEventListener("keydown", keyDown);
 		document.addEventListener("keyup", keyUp);
-		const collide = scene.getObjectByName("Boxy");
+		const collide = scene.getObjectByName("Boxy") as THREE.Mesh;
 		console.log("Boxy = ", collide);
 		if (collide) {
 			collide.geometry.computeBoundingBox();
+			collide.geometry.boundingBox?.expandByScalar(0.5);
+			collisionObjects.push(collide);
 		}
 	}, []);
 
