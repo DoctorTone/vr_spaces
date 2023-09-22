@@ -12,6 +12,10 @@ import { Billboard, Text } from "@react-three/drei";
 const Exhibits = () => {
 	return (
 		<group>
+			<mesh name="Boxy">
+				<boxGeometry args={[3, 4, 3]} />
+				<meshBasicMaterial color={0x000000} />
+			</mesh>
 			<mesh position={[-10.7, 1, 3.305]}>
 				<boxGeometry args={[1.35, 2.5, 0.1]} />
 				<meshStandardMaterial
@@ -45,123 +49,109 @@ const Exhibits = () => {
 				/>
 			</group>
 			<group>
-				<Billboard
+				<Text
 					position={[-9.4, 2, 3]}
-					follow={true}
-					lockX={false}
-					lockY={false}
-					lockZ={false}
-				>
-					<Text fontSize={0.1} color={0x333333} textAlign="center">
-						Art
-					</Text>
-				</Billboard>
-				<Art
-					position={[-9.4, 1, 3]}
-					scale={[0.03, 0.03, 0.03]}
 					rotation-y={Math.PI}
+					fontSize={0.1}
+					color={0x333333}
+					textAlign="center"
+				>
+					Art
+				</Text>
+				<Art
+					name="Art"
+					position={[-9.4, 1, 3]}
+					rotation-y={Math.PI}
+					scale={[0.03, 0.03, 0.03]}
 				/>
 			</group>
 			<group>
-				<Billboard
+				<Text
 					position={[-8.4, 1.6, 3]}
-					follow={true}
-					lockX={false}
-					lockY={false}
-					lockZ={false}
+					rotation-y={Math.PI}
+					fontSize={0.1}
+					color={0x333333}
+					textAlign="center"
 				>
-					<Text fontSize={0.1} color={0x333333} textAlign="center">
-						Architecture
-					</Text>
-				</Billboard>
+					Architecture
+				</Text>
 				<Architecture
+					name="Architecture"
 					position={[-8.4, 1, 3]}
 					rotation-y={Math.PI}
 					scale={0.4}
 				/>
 			</group>
 			<group>
-				<Billboard
+				<Text
 					position={[-7.35, 1.6, 3]}
-					follow={true}
-					lockX={false}
-					lockY={false}
-					lockZ={false}
+					rotation-y={Math.PI}
+					fontSize={0.1}
+					color={0x333333}
+					textAlign="center"
 				>
-					<Text fontSize={0.1} color={0x333333} textAlign="center">
-						Film
-					</Text>
-				</Billboard>
+					Film
+				</Text>
 				<Video position={[-7.35, 1.25, 3]} rotation-y={Math.PI} />
 			</group>
 			<group>
-				<Billboard
+				<Text
 					position={[-6.35, 1.55, 3]}
-					follow={true}
-					lockX={false}
-					lockY={false}
-					lockZ={false}
+					rotation-y={Math.PI}
+					fontSize={0.1}
+					color={0x333333}
+					textAlign="center"
 				>
-					<Text fontSize={0.1} color={0x333333} textAlign="center">
-						Education
-					</Text>
-				</Billboard>
+					Education
+				</Text>
 				<Education position={[-6.35, 1.2, 3]} rotation-x={-Math.PI / 4} />
 			</group>
 			<group>
-				<Billboard
+				<Text
 					position={[6.4, 1.65, 2.9]}
-					follow={true}
-					lockX={false}
-					lockY={false}
-					lockZ={false}
+					rotation-y={Math.PI}
+					fontSize={0.1}
+					color={0x333333}
+					textAlign="center"
 				>
-					<Text fontSize={0.1} color={0x333333} textAlign="center">
-						Games
-					</Text>
-				</Billboard>
+					Games
+				</Text>
 				<Games position={[6.4, 1.25, 2.9]} scale={0.1} />
 			</group>
 			<group>
-				<Billboard
+				<Text
 					position={[7.4, 1.75, 2.9]}
-					follow={true}
-					lockX={false}
-					lockY={false}
-					lockZ={false}
+					rotation-y={Math.PI}
+					fontSize={0.1}
+					color={0x333333}
+					textAlign="center"
 				>
-					<Text fontSize={0.1} color={0x333333} textAlign="center">
-						Advertising
-					</Text>
-				</Billboard>
+					Advertising
+				</Text>
 				<Advertising position={[7.4, 1.1, 2.9]} rotation-z={-Math.PI / 12} />
 			</group>
 			<group>
-				<Billboard
+				<Text
 					position={[8.4, 1.65, 2.9]}
-					follow={true}
-					lockX={false}
-					lockY={false}
-					lockZ={false}
+					rotation-y={Math.PI}
+					fontSize={0.1}
+					color={0x333333}
+					textAlign="center"
 				>
-					<Text fontSize={0.1} color={0x333333} textAlign="center">
-						Health
-					</Text>
-				</Billboard>
+					Health
+				</Text>
 				<Health position={[8.4, 1.3, 2.9]} scale={1} />
 			</group>
 			<group>
-				<Billboard
+				<Text
 					position={[9.4, 1.55, 2.9]}
-					follow={true}
-					lockX={false}
-					lockY={false}
-					lockZ={false}
+					rotation-y={Math.PI}
+					fontSize={0.1}
+					color={0x333333}
+					textAlign="center"
 				>
-					<Text fontSize={0.1} color={0x333333} textAlign="center">
-						Music
-					</Text>
-				</Billboard>
+					Music
+				</Text>
 				<Music position={[9.4, 1.2, 2.9]} scale={0.0005} />
 			</group>
 		</group>

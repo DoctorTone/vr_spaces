@@ -158,6 +158,7 @@ export function ShowRoom(props: JSX.IntrinsicElements["group"]) {
 					<meshStandardMaterial color={0xc4c3ba} metalness={0} roughness={1} />
 				</mesh>
 				<mesh
+					name="Wall"
 					geometry={nodes.Cube024_1.geometry}
 					position={[0, -0.389, 2.309]}
 					material={wallMaterial}
