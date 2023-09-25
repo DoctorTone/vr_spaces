@@ -21,6 +21,8 @@ const Player = () => {
 		"Collision4",
 		"Collision5",
 		"Collision6",
+		"Collision7",
+		"Collision8",
 	];
 	const velocity = new THREE.Vector3();
 	const direction = new THREE.Vector3();

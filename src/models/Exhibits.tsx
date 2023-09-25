@@ -37,6 +37,14 @@ const Exhibits = () => {
 				<boxGeometry args={[7.25, 4, 2]} />
 				<meshBasicMaterial color={0xff0000} />
 			</mesh>
+			<mesh visible={false} name="Collision7" position={[10.5, 2, 4]}>
+				<boxGeometry args={[2, 4, 2]} />
+				<meshBasicMaterial color={0xff0000} />
+			</mesh>
+			<mesh visible={false} name="Collision8" position={[12, 2, 0]}>
+				<boxGeometry args={[1, 4, 8]} />
+				<meshBasicMaterial color={0xff0000} />
+			</mesh>
 
 			<mesh position={[-10.7, 1, 3.305]}>
 				<boxGeometry args={[1.35, 2.5, 0.1]} />
