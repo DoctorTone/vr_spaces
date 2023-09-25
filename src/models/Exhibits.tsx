@@ -12,9 +12,10 @@ import { Billboard, Text } from "@react-three/drei";
 const Exhibits = () => {
 	return (
 		<group>
-			<mesh name="Boxy">
-				<boxGeometry args={[3, 4, 3]} />
-				<meshBasicMaterial color={0x000000} />
+			{/* Collision boxes */}
+			<mesh visible={false} name="Collision1" position={[-12, 2, 0]}>
+				<boxGeometry args={[1, 4, 8]} />
+				<meshBasicMaterial color={0xff0000} />
 			</mesh>
 			<mesh position={[-10.7, 1, 3.305]}>
 				<boxGeometry args={[1.35, 2.5, 0.1]} />
