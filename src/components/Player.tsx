@@ -14,6 +14,7 @@ const Player = () => {
 	});
 	const lockRef = useRef(false);
 	const collisionObjects: THREE.Box3[] = [];
+	const collisionObjectNames: string[] = ["Collision1"];
 	const velocity = new THREE.Vector3();
 	const direction = new THREE.Vector3();
 	const _vector = new THREE.Vector3();
@@ -131,18 +132,24 @@ const Player = () => {
 	useEffect(() => {
 		document.addEventListener("keydown", keyDown);
 		document.addEventListener("keyup", keyUp);
-		const collide = scene.getObjectByName("Collision1") as THREE.Mesh;
-		// DEBUG
-		console.log("Collide = ", collide);
-		if (collide) {
-			collide.geometry.computeBoundingBox();
-			collide.geometry.boundingBox?.expandByScalar(0.25);
-			collide.geometry.boundingBox!.min.x += collide.position.x;
-			collide.geometry.boundingBox!.min.z += collide.position.z;
-			collide.geometry.boundingBox!.max.x += collide.position.x;
-			collide.geometry.boundingBox!.max.z += collide.position.z;
-			collisionObjects.push(collide.geometry.boundingBox!);
-		}
+		// Get all collision boxes
+		let currentCollider;
+		collisionObjectNames.forEach((obj) => {
+			currentCollider = scene.getObjectByName(obj) as THREE.Mesh;
+			if (currentCollider) {
+				currentCollider.geometry.computeBoundingBox();
+				currentCollider.geometry.boundingBox!.expandByScalar(0.25);
+				currentCollider.geometry.boundingBox!.min.x +=
+					currentCollider.position.x;
+				currentCollider.geometry.boundingBox!.min.z +=
+					currentCollider.position.z;
+				currentCollider.geometry.boundingBox!.max.x +=
+					currentCollider.position.x;
+				currentCollider.geometry.boundingBox!.max.z +=
+					currentCollider.position.z;
+				collisionObjects.push(currentCollider.geometry.boundingBox!);
+			}
+		});
 	}, []);
 
 	return (
