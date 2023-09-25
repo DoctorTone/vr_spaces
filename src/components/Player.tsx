@@ -14,11 +14,17 @@ const Player = () => {
 	});
 	const lockRef = useRef(false);
 	const collisionObjects: THREE.Box3[] = [];
-	const collisionObjectNames: string[] = ["Collision1"];
+	const collisionObjectNames: string[] = [
+		"Collision1",
+		"Collision2",
+		"Collision3",
+	];
 	const velocity = new THREE.Vector3();
 	const direction = new THREE.Vector3();
 	const _vector = new THREE.Vector3();
 	const lastCamPosition = new THREE.Vector3();
+	let currentBox;
+	let collided = false;
 	const scene = useThree((state) => state.scene);
 
 	const moveRight = (distance: number, camera: THREE.Camera) => {
@@ -63,14 +69,17 @@ const Player = () => {
 				velocity.x -= direction.x * MOVEMENT_SPEED * delta;
 			moveRight(-velocity.x * delta, camera);
 			moveForward(-velocity.z * delta, camera);
-			const box = collisionObjects[0];
-			if (box) {
-				if (box!.containsPoint(camera.position)) {
-					console.log("Hit it");
+			for (let i = 0; i < collisionObjects.length; ++i) {
+				currentBox = collisionObjects[i];
+				if (currentBox!.containsPoint(camera.position)) {
+					collided = true;
 					camera.position.copy(lastCamPosition);
-				} else {
-					lastCamPosition.copy(camera.position);
+					break;
 				}
+			}
+			if (!collided) {
+				lastCamPosition.copy(camera.position);
+				collided = false;
 			}
 		}
 	});
