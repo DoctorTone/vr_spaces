@@ -13,7 +13,7 @@ const App = () => {
 				<VRSpace />
 				<Perf />
 			</Canvas>
-			<HUD />
+			<HUD visible={true} />
 		</>
 	);
 };

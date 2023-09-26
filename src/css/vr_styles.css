@@ -19,9 +19,26 @@ body {
 	position: absolute;
 }
 
+@font-face {
+	font-family: "Roboto-Black";
+	src: url("./fonts/Roboto-Black.ttf");
+}
+
+@font-face {
+	font-family: "Roboto-Light";
+	src: url("./fonts/Roboto-Light.ttf");
+}
+
+@font-face {
+	font-family: "Roboto-Regular";
+	src: url("./fonts/Roboto-Regular.ttf");
+}
+
 #hud {
+	font-family: "Roboto-Light";
 	left: 12.5%;
 	top: 25%;
+	padding-top: 2%;
 	width: 75%;
 	height: 50%;
 	background: rgba(0.25, 0.25, 0.25, 0.25);
