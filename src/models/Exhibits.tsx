@@ -112,7 +112,7 @@ const Exhibits = () => {
 				</Text>
 				<Architecture
 					name="Architecture"
-					position={[-8.4, 1, 3]}
+					position={[EXHIBITS.HOUSE_POSITION.x, 1, EXHIBITS.HOUSE_POSITION.z]}
 					rotation-y={Math.PI}
 					scale={0.4}
 				/>
@@ -127,7 +127,10 @@ const Exhibits = () => {
 				>
 					Film
 				</Text>
-				<Video position={[-7.35, 1.25, 3]} rotation-y={Math.PI} />
+				<Video
+					position={[EXHIBITS.FILM_POSITION.x, 1.3, EXHIBITS.FILM_POSITION.z]}
+					rotation-y={Math.PI}
+				/>
 			</group>
 			<group>
 				<Text
@@ -139,7 +142,10 @@ const Exhibits = () => {
 				>
 					Education
 				</Text>
-				<Education position={[-6.35, 1.2, 3]} rotation-x={-Math.PI / 4} />
+				<Education
+					position={[EXHIBITS.BOOK_POSITION.x, 1.25, EXHIBITS.BOOK_POSITION.z]}
+					rotation-x={-Math.PI / 4}
+				/>
 			</group>
 			<group>
 				<Text

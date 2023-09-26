@@ -8,7 +8,10 @@ const SCENE = {
 };
 
 const EXHIBITS = {
-	ART_POSITION: new THREE.Vector3(-9.4, 0, 3),
+	ART_POSITION: new THREE.Vector3(-10.5, 0, 3),
+	HOUSE_POSITION: new THREE.Vector3(-9, 0, 3),
+	FILM_POSITION: new THREE.Vector3(-7.5, 0, 3),
+	BOOK_POSITION: new THREE.Vector3(-6, 0, 3),
 };
 
 export { SCENE, EXHIBITS };
