@@ -18,4 +18,6 @@ const EXHIBITS = {
 	PHONES_POSITION: new THREE.Vector3(10.5, 0, 3),
 };
 
-export { SCENE, EXHIBITS };
+const EXHIBIT_TEXT = [{ title: "Art", description: "Virtual art museum" }];
+
+export { SCENE, EXHIBITS, EXHIBIT_TEXT };

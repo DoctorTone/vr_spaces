@@ -1,5 +1,6 @@
 import { useState } from "react";
 import useStore from "../state/store";
+import { EXHIBIT_TEXT } from "../state/Config";
 
 interface VRState {
 	currentExhibit: number;
@@ -14,10 +15,10 @@ const HUD = () => {
 
 	return (
 		<>
-			{exhibit > 0 && (
+			{exhibit > -1 && (
 				<div id="hud" className="panel">
-					<h2>Art</h2>
-					<p>Imagine going to a virtual art museum</p>
+					<h2>{EXHIBIT_TEXT[exhibit].title}</h2>
+					<p>{EXHIBIT_TEXT[exhibit].description}</p>
 				</div>
 			)}
 		</>

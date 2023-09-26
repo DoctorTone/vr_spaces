@@ -97,7 +97,7 @@ const Player = () => {
 			tempVec.copy(camera.position);
 			tempVec.y = 0;
 			if (tempVec.distanceTo(EXHIBITS.ART_POSITION) <= SCENE.PROXIMITY) {
-				useStore.setState({ currentExhibit: 1 });
+				useStore.setState({ currentExhibit: 0 });
 				hudRef.current = true;
 			} else if (hudRef.current) {
 				useStore.setState({ currentExhibit: -1 });
