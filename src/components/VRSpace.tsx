@@ -19,8 +19,8 @@ const VRSpace = () => {
 				<pointLight position={SCENE.pointLight2} />
 				<ShowRoom />
 				<Exhibits />
+				<Player />
 			</XR>
-			<Player />
 		</>
 	);
 };

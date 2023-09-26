@@ -8,15 +8,13 @@ import useStore from "../state/store";
 const MOVEMENT_SPEED = 50;
 
 const Player = () => {
-	const HUDVisible = useStore((state) => state.HUDVisible);
-	const setHUDVisibility = useStore((state) => state.setHUDVisibility);
-
 	const directionRef = useRef({
 		forward: false,
 		backward: false,
 		left: false,
 		right: false,
 	});
+	const hudRef = useRef(false);
 	const lockRef = useRef(false);
 	const collisionObjects: THREE.Box3[] = [];
 	const collisionObjectNames: string[] = [
@@ -99,9 +97,11 @@ const Player = () => {
 			tempVec.copy(camera.position);
 			tempVec.y = 0;
 			if (tempVec.distanceTo(EXHIBITS.ART_POSITION) <= SCENE.PROXIMITY) {
-				setHUDVisibility(true);
-			} else if (HUDVisible) {
-				setHUDVisibility(false);
+				useStore.setState({ currentExhibit: 1 });
+				hudRef.current = true;
+			} else if (hudRef.current) {
+				useStore.setState({ currentExhibit: -1 });
+				hudRef.current = false;
 			}
 		}
 	});
