@@ -66,7 +66,11 @@ export function ShowRoom(props: JSX.IntrinsicElements["group"]) {
 
 	return (
 		<group {...props} dispose={null}>
+			{/* Plinths and tops */}
 			<Plinth position={[-10.5, 0.475, 3]} />
+			<Plinth position={[-6, 0.475, 3]} />
+			<Plinth position={[-7.5, 0.475, 3]} />
+			<Plinth position={[-9, 0.475, 3]} />
 			<group rotation={[-Math.PI / 2, 0, 0]}>
 				<group
 					position={[0, -0.389, 2.309]}
@@ -133,9 +137,9 @@ export function ShowRoom(props: JSX.IntrinsicElements["group"]) {
 					<meshStandardMaterial color={0xc4c3ba} metalness={0} roughness={1} />
 				</mesh>
 				{/* Plinth top */}
-				<mesh geometry={nodes.Cube016_0.geometry} position={[0, -0.389, 2.309]}>
+				{/* <mesh geometry={nodes.Cube016_0.geometry} position={[0, -0.389, 2.309]}>
 					<meshStandardMaterial color={0x363636} roughness={0.64} />
-				</mesh>
+				</mesh> */}
 				<mesh
 					geometry={nodes.Cube017_0.geometry}
 					material={wallMaterial}
@@ -148,9 +152,9 @@ export function ShowRoom(props: JSX.IntrinsicElements["group"]) {
 					position={[0, -0.389, 1.986]}
 				/>
 				{/* Plinths */}
-				<mesh geometry={nodes.Cube020_0.geometry} position={[0, -0.389, 2.309]}>
+				{/* <mesh geometry={nodes.Cube020_0.geometry} position={[0, -0.389, 2.309]}>
 					<meshStandardMaterial color={0xffffff} roughness={0.917} />
-				</mesh>
+				</mesh> */}
 				<mesh
 					geometry={nodes.Cube021_0.geometry}
 					material={wallMaterial}
