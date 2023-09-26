@@ -1,9 +1,5 @@
 import * as THREE from "three";
 
-interface ExhibitStates {
-	[key: string]: THREE.Vector3;
-}
-
 const SCENE = {
 	camPosition: new THREE.Vector3(0, 1.7, 0),
 	pointLight1: new THREE.Vector3(-5, 4.25, 0),
@@ -33,6 +29,15 @@ const EXHIBITS = [
 	new THREE.Vector3(10.5, 0, 3),
 ];
 
-const EXHIBIT_TEXT = [{ title: "Art", description: "Virtual art museum" }];
+const EXHIBIT_TEXT = [
+	{ title: "Art", description: "Virtual art museum" },
+	{ title: "Architecture", description: "Houses" },
+	{ title: "Film", description: "Watch films" },
+	{ title: "Education", description: "Learning" },
+	{ title: "Games", description: "Shooters" },
+	{ title: "Advertising", description: "Pepsi" },
+	{ title: "Health", description: "Virtual surgery" },
+	{ title: "Music", description: "Concerts" },
+];
 
 export { SCENE, EXHIBITS, EXHIBITS_INDEX, EXHIBIT_TEXT };
