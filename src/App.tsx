@@ -8,6 +8,7 @@ import useStore from "./state/store.js";
 
 const App = () => {
 	const HUDVisible = useStore((state) => state.HUDVisible);
+	const currentExhibit = useStore((state) => state.currentExhibit);
 
 	return (
 		<>
@@ -16,7 +17,7 @@ const App = () => {
 				<VRSpace />
 				<Perf />
 			</Canvas>
-			<HUD visible={HUDVisible} />
+			<HUD visible={HUDVisible} exhibit={currentExhibit} />
 		</>
 	);
 };

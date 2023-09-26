@@ -2,9 +2,10 @@ import React from "react";
 
 interface HUDProps {
 	visible: boolean;
+	exhibit: number;
 }
 
-const HUD = ({ visible }: HUDProps) => {
+const HUD = ({ visible, exhibit }: HUDProps) => {
 	return (
 		<>
 			{visible && (

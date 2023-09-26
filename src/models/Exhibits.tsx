@@ -7,7 +7,8 @@ import { Games } from "./Games";
 import { Advertising } from "./Advertising";
 import { Health } from "./Health";
 import { Music } from "./Music";
-import { Html, Text } from "@react-three/drei";
+import { Text } from "@react-three/drei";
+import { EXHIBITS } from "../state/Config";
 
 const Exhibits = () => {
 	return (
@@ -90,7 +91,10 @@ const Exhibits = () => {
 					rotation-y={(Math.PI * 2) / 3}
 				/>
 			</group>
-			<group position={[-9.4, 2, 3]} rotation-y={Math.PI}>
+			<group
+				position={[EXHIBITS.ART_POSITION.x, 2, EXHIBITS.ART_POSITION.z]}
+				rotation-y={Math.PI}
+			>
 				<Text fontSize={0.1} color={0x333333} textAlign="center">
 					Art
 				</Text>

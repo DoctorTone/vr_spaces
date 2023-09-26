@@ -2,10 +2,15 @@ import { useRef, useEffect } from "react";
 import * as THREE from "three";
 import { PointerLockControls } from "@react-three/drei";
 import { useFrame, useThree } from "@react-three/fiber";
+import { EXHIBITS, SCENE } from "../state/Config";
+import useStore from "../state/store";
 
 const MOVEMENT_SPEED = 50;
 
 const Player = () => {
+	const HUDVisible = useStore((state) => state.HUDVisible);
+	const setHUDVisibility = useStore((state) => state.setHUDVisibility);
+
 	const directionRef = useRef({
 		forward: false,
 		backward: false,
@@ -30,6 +35,7 @@ const Player = () => {
 	const velocity = new THREE.Vector3();
 	const direction = new THREE.Vector3();
 	const _vector = new THREE.Vector3();
+	const tempVec = new THREE.Vector3();
 	const lastCamPosition = new THREE.Vector3();
 	let currentBox;
 	let collided = false;
@@ -88,6 +94,14 @@ const Player = () => {
 			if (!collided) {
 				lastCamPosition.copy(camera.position);
 				collided = false;
+			}
+			// See if we are near to artefacts - show UI
+			tempVec.copy(camera.position);
+			tempVec.y = 0;
+			if (tempVec.distanceTo(EXHIBITS.ART_POSITION) <= SCENE.PROXIMITY) {
+				setHUDVisibility(true);
+			} else if (HUDVisible) {
+				setHUDVisibility(false);
 			}
 		}
 	});
