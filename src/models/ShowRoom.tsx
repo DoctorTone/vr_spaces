@@ -71,6 +71,12 @@ export function ShowRoom(props: JSX.IntrinsicElements["group"]) {
 			<Plinth position={[-6, 0.475, 3]} />
 			<Plinth position={[-7.5, 0.475, 3]} />
 			<Plinth position={[-9, 0.475, 3]} />
+
+			<Plinth position={[6, 0.475, 3]} />
+			<Plinth position={[7.5, 0.475, 3]} />
+			<Plinth position={[9, 0.475, 3]} />
+			<Plinth position={[10.5, 0.475, 3]} />
+
 			<group rotation={[-Math.PI / 2, 0, 0]}>
 				<group
 					position={[0, -0.389, 2.309]}

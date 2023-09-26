@@ -138,9 +138,9 @@ const Exhibits = () => {
 				</Text>
 				<Education position-y={1.25} rotation-x={-Math.PI / 4} />
 			</group>
-			<group>
+			<group position={EXHIBITS.GAME_POSITION}>
 				<Text
-					position={[6.4, 1.65, 2.9]}
+					position-y={1.65}
 					rotation-y={Math.PI}
 					fontSize={0.1}
 					color={0x333333}
@@ -148,11 +148,11 @@ const Exhibits = () => {
 				>
 					Games
 				</Text>
-				<Games position={[6.4, 1.25, 2.9]} scale={0.1} />
+				<Games position-y={1.25} scale={0.1} />
 			</group>
-			<group>
+			<group position={EXHIBITS.BOTTLE_POSITION}>
 				<Text
-					position={[7.4, 1.75, 2.9]}
+					position-y={1.75}
 					rotation-y={Math.PI}
 					fontSize={0.1}
 					color={0x333333}
@@ -160,11 +160,11 @@ const Exhibits = () => {
 				>
 					Advertising
 				</Text>
-				<Advertising position={[7.4, 1.1, 2.9]} rotation-z={-Math.PI / 12} />
+				<Advertising position-y={1.1} rotation-z={-Math.PI / 12} />
 			</group>
-			<group>
+			<group position={EXHIBITS.CROSS_POSITION}>
 				<Text
-					position={[8.4, 1.65, 2.9]}
+					position-y={1.65}
 					rotation-y={Math.PI}
 					fontSize={0.1}
 					color={0x333333}
@@ -172,11 +172,11 @@ const Exhibits = () => {
 				>
 					Health
 				</Text>
-				<Health position={[8.4, 1.3, 2.9]} scale={1} />
+				<Health position-y={1.3} scale={1} />
 			</group>
-			<group>
+			<group position={EXHIBITS.PHONES_POSITION}>
 				<Text
-					position={[9.4, 1.55, 2.9]}
+					position-y={1.65}
 					rotation-y={Math.PI}
 					fontSize={0.1}
 					color={0x333333}
@@ -184,7 +184,7 @@ const Exhibits = () => {
 				>
 					Music
 				</Text>
-				<Music position={[9.4, 1.2, 2.9]} scale={0.0005} />
+				<Music position-y={1.25} scale={0.0005} />
 			</group>
 		</group>
 	);

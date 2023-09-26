@@ -12,6 +12,10 @@ const EXHIBITS = {
 	HOUSE_POSITION: new THREE.Vector3(-9, 0, 3),
 	FILM_POSITION: new THREE.Vector3(-7.5, 0, 3),
 	BOOK_POSITION: new THREE.Vector3(-6, 0, 3),
+	GAME_POSITION: new THREE.Vector3(6, 0, 3),
+	BOTTLE_POSITION: new THREE.Vector3(7.5, 0, 3),
+	CROSS_POSITION: new THREE.Vector3(9, 0, 3),
+	PHONES_POSITION: new THREE.Vector3(10.5, 0, 3),
 };
 
 export { SCENE, EXHIBITS };
