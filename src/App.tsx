@@ -4,6 +4,7 @@ import { Perf } from "r3f-perf";
 import VRSpace from "./components/VRSpace";
 import { SCENE } from "./state/Config.tsx";
 import HUD from "./UI/HUD";
+import Welcome from "./UI/Welcome";
 
 const App = () => {
 	return (
@@ -14,6 +15,7 @@ const App = () => {
 				<Perf />
 			</Canvas>
 			<HUD />
+			<Welcome />
 		</>
 	);
 };

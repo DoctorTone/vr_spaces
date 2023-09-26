@@ -55,10 +55,18 @@ const Player = () => {
 	};
 	const pointerLocked = (): void => {
 		lockRef.current = true;
+		const start = document.getElementById("welcome");
+		if (start) {
+			start.style.display = "none";
+		}
 	};
 
 	const pointerUnlocked = (): void => {
 		lockRef.current = false;
+		const start = document.getElementById("welcome");
+		if (start) {
+			start.style.display = "block";
+		}
 	};
 
 	useFrame((state, delta) => {
@@ -192,7 +200,11 @@ const Player = () => {
 	}, []);
 
 	return (
-		<PointerLockControls onLock={pointerLocked} onUnlock={pointerUnlocked} />
+		<PointerLockControls
+			selector="#startButton"
+			onLock={pointerLocked}
+			onUnlock={pointerUnlocked}
+		/>
 	);
 };
 

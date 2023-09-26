@@ -75,9 +75,9 @@ const Exhibits = () => {
 					metalness={0.6}
 				/>
 			</mesh>
-			<group>
+			<group position={EXHIBITS[EXHIBITS_INDEX.CAR_POSITION]}>
 				<Text
-					position={[0, 2.5, 6.15]}
+					position={[0, 2.5, 2.65]}
 					rotation-y={Math.PI}
 					fontSize={0.5}
 					color={0x333333}
@@ -85,11 +85,7 @@ const Exhibits = () => {
 				>
 					Showroom
 				</Text>
-				<Lotus
-					position={[0, 0, 3.5]}
-					scale={0.65}
-					rotation-y={(Math.PI * 2) / 3}
-				/>
+				<Lotus scale={0.65} rotation-y={(Math.PI * 2) / 3} />
 			</group>
 			<group
 				position={EXHIBITS[EXHIBITS_INDEX.ART_POSITION]}

@@ -34,16 +34,51 @@ body {
 	src: url("./fonts/Roboto-Regular.ttf");
 }
 
-#hud {
+#hud,
+#welcome {
 	font-family: "Roboto-Light";
-	left: 12.5%;
-	top: 25%;
-	padding-top: 2%;
-	width: 75%;
+	left: 35%;
+	top: 15%;
+	width: 30%;
 	height: 50%;
+	padding-left: 1%;
+	padding-right: 1%;
 	background: rgba(0.25, 0.25, 0.25, 0.25);
 	z-index: 1;
 	color: white;
-	text-align: center;
 	border-radius: 20px;
+}
+
+#hud h1 {
+	font-size: 50px;
+	text-align: center;
+}
+
+#hud p {
+	font-size: 25px;
+	text-align: justify;
+}
+
+#welcome {
+	background: rgba(0.25, 0.25, 0.25, 0.75);
+}
+#welcome h1 {
+	text-align: center;
+}
+#welcome p {
+	font-size: 20px;
+	text-align: justify;
+}
+
+.startButton {
+	background-color: #008cba;
+	border: none;
+	color: white;
+	padding: 15px 32px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	margin: 4px 2px;
+	cursor: pointer;
 }

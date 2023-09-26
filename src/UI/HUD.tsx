@@ -17,7 +17,7 @@ const HUD = () => {
 		<>
 			{exhibit > -1 && (
 				<div id="hud" className="panel">
-					<h2>{EXHIBIT_TEXT[exhibit].title}</h2>
+					<h1>{EXHIBIT_TEXT[exhibit].title}</h1>
 					<p>{EXHIBIT_TEXT[exhibit].description}</p>
 				</div>
 			)}
