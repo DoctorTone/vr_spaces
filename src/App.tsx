@@ -3,6 +3,7 @@ import { Canvas } from "@react-three/fiber";
 import { Perf } from "r3f-perf";
 import VRSpace from "./components/VRSpace";
 import { SCENE } from "./state/Config.tsx";
+import HUD from "./UI/HUD";
 
 const App = () => {
 	return (
@@ -12,6 +13,7 @@ const App = () => {
 				<VRSpace />
 				<Perf />
 			</Canvas>
+			<HUD />
 		</>
 	);
 };

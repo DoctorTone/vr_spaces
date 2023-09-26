@@ -13,3 +13,20 @@ body,
 body {
 	background: #4e4b4b;
 }
+
+/* HUD */
+.panel {
+	position: absolute;
+}
+
+#hud {
+	left: 12.5%;
+	top: 25%;
+	width: 75%;
+	height: 50%;
+	background: rgba(0.25, 0.25, 0.25, 0.25);
+	z-index: 1;
+	color: white;
+	text-align: center;
+	border-radius: 20px;
+}
