@@ -91,18 +91,15 @@ const Exhibits = () => {
 					rotation-y={(Math.PI * 2) / 3}
 				/>
 			</group>
-			<group
-				position={[EXHIBITS.ART_POSITION.x, 2, EXHIBITS.ART_POSITION.z]}
-				rotation-y={Math.PI}
-			>
-				<Text fontSize={0.1} color={0x333333} textAlign="center">
+			<group position={EXHIBITS.ART_POSITION} rotation-y={Math.PI}>
+				<Text position-y={2} fontSize={0.1} color={0x333333} textAlign="center">
 					Art
 				</Text>
-				<Art name="Art" position-y={-1} scale={[0.03, 0.03, 0.03]} />
+				<Art name="Art" position-y={1} scale={[0.03, 0.03, 0.03]} />
 			</group>
-			<group>
+			<group position={EXHIBITS.HOUSE_POSITION}>
 				<Text
-					position={[-8.4, 1.6, 3]}
+					position-y={1.6}
 					rotation-y={Math.PI}
 					fontSize={0.1}
 					color={0x333333}
@@ -112,14 +109,14 @@ const Exhibits = () => {
 				</Text>
 				<Architecture
 					name="Architecture"
-					position={[EXHIBITS.HOUSE_POSITION.x, 1, EXHIBITS.HOUSE_POSITION.z]}
+					position-y={1}
 					rotation-y={Math.PI}
 					scale={0.4}
 				/>
 			</group>
-			<group>
+			<group position={EXHIBITS.FILM_POSITION}>
 				<Text
-					position={[-7.35, 1.6, 3]}
+					position-y={1.65}
 					rotation-y={Math.PI}
 					fontSize={0.1}
 					color={0x333333}
@@ -127,14 +124,11 @@ const Exhibits = () => {
 				>
 					Film
 				</Text>
-				<Video
-					position={[EXHIBITS.FILM_POSITION.x, 1.3, EXHIBITS.FILM_POSITION.z]}
-					rotation-y={Math.PI}
-				/>
+				<Video position-y={1.3} />
 			</group>
-			<group>
+			<group position={EXHIBITS.BOOK_POSITION}>
 				<Text
-					position={[-6.35, 1.55, 3]}
+					position-y={1.6}
 					rotation-y={Math.PI}
 					fontSize={0.1}
 					color={0x333333}
@@ -142,10 +136,7 @@ const Exhibits = () => {
 				>
 					Education
 				</Text>
-				<Education
-					position={[EXHIBITS.BOOK_POSITION.x, 1.25, EXHIBITS.BOOK_POSITION.z]}
-					rotation-x={-Math.PI / 4}
-				/>
+				<Education position-y={1.25} rotation-x={-Math.PI / 4} />
 			</group>
 			<group>
 				<Text
