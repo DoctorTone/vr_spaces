@@ -8,7 +8,7 @@ import { Advertising } from "./Advertising";
 import { Health } from "./Health";
 import { Music } from "./Music";
 import { Text } from "@react-three/drei";
-import { EXHIBITS } from "../state/Config";
+import { EXHIBITS, EXHIBITS_INDEX } from "../state/Config";
 
 const Exhibits = () => {
 	return (
@@ -91,13 +91,16 @@ const Exhibits = () => {
 					rotation-y={(Math.PI * 2) / 3}
 				/>
 			</group>
-			<group position={EXHIBITS.ART_POSITION} rotation-y={Math.PI}>
+			<group
+				position={EXHIBITS[EXHIBITS_INDEX.ART_POSITION]}
+				rotation-y={Math.PI}
+			>
 				<Text position-y={2} fontSize={0.1} color={0x333333} textAlign="center">
 					Art
 				</Text>
 				<Art name="Art" position-y={1} scale={[0.03, 0.03, 0.03]} />
 			</group>
-			<group position={EXHIBITS.HOUSE_POSITION}>
+			<group position={EXHIBITS[EXHIBITS_INDEX.HOUSE_POSITION]}>
 				<Text
 					position-y={1.6}
 					rotation-y={Math.PI}
@@ -114,7 +117,7 @@ const Exhibits = () => {
 					scale={0.4}
 				/>
 			</group>
-			<group position={EXHIBITS.FILM_POSITION}>
+			<group position={EXHIBITS[EXHIBITS_INDEX.FILM_POSITION]}>
 				<Text
 					position-y={1.65}
 					rotation-y={Math.PI}
@@ -126,7 +129,7 @@ const Exhibits = () => {
 				</Text>
 				<Video position-y={1.3} />
 			</group>
-			<group position={EXHIBITS.BOOK_POSITION}>
+			<group position={EXHIBITS[EXHIBITS_INDEX.BOOK_POSITION]}>
 				<Text
 					position-y={1.6}
 					rotation-y={Math.PI}
@@ -138,7 +141,7 @@ const Exhibits = () => {
 				</Text>
 				<Education position-y={1.25} rotation-x={-Math.PI / 4} />
 			</group>
-			<group position={EXHIBITS.GAME_POSITION}>
+			<group position={EXHIBITS[EXHIBITS_INDEX.GAME_POSITION]}>
 				<Text
 					position-y={1.65}
 					rotation-y={Math.PI}
@@ -150,7 +153,7 @@ const Exhibits = () => {
 				</Text>
 				<Games position-y={1.25} scale={0.1} />
 			</group>
-			<group position={EXHIBITS.BOTTLE_POSITION}>
+			<group position={EXHIBITS[EXHIBITS_INDEX.BOTTLE_POSITION]}>
 				<Text
 					position-y={1.75}
 					rotation-y={Math.PI}
@@ -162,7 +165,7 @@ const Exhibits = () => {
 				</Text>
 				<Advertising position-y={1.1} rotation-z={-Math.PI / 12} />
 			</group>
-			<group position={EXHIBITS.CROSS_POSITION}>
+			<group position={EXHIBITS[EXHIBITS_INDEX.CROSS_POSITION]}>
 				<Text
 					position-y={1.65}
 					rotation-y={Math.PI}
@@ -174,7 +177,7 @@ const Exhibits = () => {
 				</Text>
 				<Health position-y={1.3} scale={1} />
 			</group>
-			<group position={EXHIBITS.PHONES_POSITION}>
+			<group position={EXHIBITS[EXHIBITS_INDEX.PHONES_POSITION]}>
 				<Text
 					position-y={1.65}
 					rotation-y={Math.PI}

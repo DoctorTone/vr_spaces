@@ -16,6 +16,7 @@ const Player = () => {
 	});
 	const hudRef = useRef(false);
 	const lockRef = useRef(false);
+	const nearRef = useRef(false);
 	const collisionObjects: THREE.Box3[] = [];
 	const collisionObjectNames: string[] = [
 		"Collision1",
@@ -96,10 +97,17 @@ const Player = () => {
 			// See if we are near to artefacts - show UI
 			tempVec.copy(camera.position);
 			tempVec.y = 0;
-			if (tempVec.distanceTo(EXHIBITS.ART_POSITION) <= SCENE.PROXIMITY) {
-				useStore.setState({ currentExhibit: 0 });
-				hudRef.current = true;
-			} else if (hudRef.current) {
+			nearRef.current = false;
+			for (let i = 0; i < EXHIBITS.length; ++i) {
+				if (tempVec.distanceTo(EXHIBITS[i]) <= SCENE.PROXIMITY) {
+					useStore.setState({ currentExhibit: i });
+					hudRef.current = true;
+					nearRef.current = true;
+					break;
+				}
+			}
+
+			if (hudRef.current && !nearRef.current) {
 				useStore.setState({ currentExhibit: -1 });
 				hudRef.current = false;
 			}

@@ -1,5 +1,9 @@
 import * as THREE from "three";
 
+interface ExhibitStates {
+	[key: string]: THREE.Vector3;
+}
+
 const SCENE = {
 	camPosition: new THREE.Vector3(0, 1.7, 0),
 	pointLight1: new THREE.Vector3(-5, 4.25, 0),
@@ -7,17 +11,28 @@ const SCENE = {
 	PROXIMITY: 1.25,
 };
 
-const EXHIBITS = {
-	ART_POSITION: new THREE.Vector3(-10.5, 0, 3),
-	HOUSE_POSITION: new THREE.Vector3(-9, 0, 3),
-	FILM_POSITION: new THREE.Vector3(-7.5, 0, 3),
-	BOOK_POSITION: new THREE.Vector3(-6, 0, 3),
-	GAME_POSITION: new THREE.Vector3(6, 0, 3),
-	BOTTLE_POSITION: new THREE.Vector3(7.5, 0, 3),
-	CROSS_POSITION: new THREE.Vector3(9, 0, 3),
-	PHONES_POSITION: new THREE.Vector3(10.5, 0, 3),
-};
+enum EXHIBITS_INDEX {
+	ART_POSITION,
+	HOUSE_POSITION,
+	FILM_POSITION,
+	BOOK_POSITION,
+	GAME_POSITION,
+	BOTTLE_POSITION,
+	CROSS_POSITION,
+	PHONES_POSITION,
+}
+
+const EXHIBITS = [
+	new THREE.Vector3(-10.5, 0, 3),
+	new THREE.Vector3(-9, 0, 3),
+	new THREE.Vector3(-7.5, 0, 3),
+	new THREE.Vector3(-6, 0, 3),
+	new THREE.Vector3(6, 0, 3),
+	new THREE.Vector3(7.5, 0, 3),
+	new THREE.Vector3(9, 0, 3),
+	new THREE.Vector3(10.5, 0, 3),
+];
 
 const EXHIBIT_TEXT = [{ title: "Art", description: "Virtual art museum" }];
 
-export { SCENE, EXHIBITS, EXHIBIT_TEXT };
+export { SCENE, EXHIBITS, EXHIBITS_INDEX, EXHIBIT_TEXT };
