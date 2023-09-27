@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { useController, useXR } from "@react-three/xr";
 import { useFrame } from "@react-three/fiber";
 import { SCENE } from "../state/Config";
@@ -17,10 +18,20 @@ const VRNavigation = () => {
 			rightController.inputSource!.gamepad!.axes[3],
 		];
 		camera.getWorldDirection(tempVec);
-		// player.rotation.y += -xPos * delta * SCENE.ROTATION_SPEED;
+		// Forward/backward movement
 		player.position.x += tempVec.x * -zPos * delta * SCENE.MOVEMENT_SPEED;
 		player.position.z += tempVec.z * -zPos * delta * SCENE.MOVEMENT_SPEED;
+
+		// Sideways movement
+		tempVec.crossVectors(player.up, tempVec);
+		player.position.x += tempVec.x * -xPos * delta * SCENE.MOVEMENT_SPEED;
+		player.position.z += tempVec.z * -xPos * delta * SCENE.MOVEMENT_SPEED;
 	});
+
+	useEffect(() => {
+		player.position.set(-11, 0, -1);
+		player.rotation.y = -Math.PI / 2;
+	}, []);
 
 	return <></>;
 };
