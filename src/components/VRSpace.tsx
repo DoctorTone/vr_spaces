@@ -6,6 +6,7 @@ import { ShowRoom } from "../models/ShowRoom";
 import Ground from "../models/Ground";
 import Exhibits from "../models/Exhibits";
 import Player from "./Player";
+import VRNavigation from "./VRNavigation";
 
 const VRSpace = () => {
 	return (
@@ -20,6 +21,7 @@ const VRSpace = () => {
 				<ShowRoom />
 				<Exhibits />
 				<Player />
+				<VRNavigation />
 			</XR>
 		</>
 	);
