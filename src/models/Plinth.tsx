@@ -1,5 +1,3 @@
-import React from "react";
-
 const Plinth = (props: JSX.IntrinsicElements["group"]) => {
 	return (
 		<group {...props}>
