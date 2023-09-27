@@ -55,18 +55,17 @@ const EXHIBIT_TEXT = [
 	},
 	{
 		title: "Games",
-		description:
-			"Play a whole new style of immersive games, or re-imagine some old favourites inside a VR headset!",
+		description: `Play a whole new style of immersive games, or re-imagine some old favourites inside a VR headset! VR shooter coming soon!`,
 	},
 	{
 		title: "Advertising",
 		description:
-			"Companies can promote as many products as they like in a large virtual space. They can appear as realistic as the real-world equivalent",
+			"Companies can promote as many products as they like in a large virtual space. They can appear as realistic as the real-world equivalent.",
 	},
 	{
 		title: "Health",
 		description:
-			"VR opens up all sorts of opportunities such as virtual surgery, visualisation of anatomy and sharing of vast quantities of medical data and knowledge",
+			"VR opens up all sorts of opportunities such as virtual surgery, visualisation of anatomy and sharing of vast quantities of medical data and knowledge.",
 	},
 	{
 		title: "Music",
