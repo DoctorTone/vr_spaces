@@ -56,11 +56,23 @@ const EXHIBIT_TEXT = [
 	{
 		title: "Games",
 		description:
-			"Play your favourite games inside a headset so it felt even more immersive!",
+			"Play a whole new style of immersive games, or re-imagine some old favourites inside a VR headset!",
 	},
-	{ title: "Advertising", description: "Pepsi" },
-	{ title: "Health", description: "Virtual surgery" },
-	{ title: "Music", description: "Concerts" },
+	{
+		title: "Advertising",
+		description:
+			"Companies can promote as many products as they like in a large virtual space. They can appear as realistic as the real-world equivalent",
+	},
+	{
+		title: "Health",
+		description:
+			"VR opens up all sorts of opportunities such as virtual surgery, visualisation of anatomy and sharing of vast quantities of medical data and knowledge",
+	},
+	{
+		title: "Music",
+		description:
+			"Your favourite band in a 360 video or a calming environment with relaxing sounds.",
+	},
 	{
 		title: "Showroom",
 		description: `A large space to display anything you want`,
