@@ -1,7 +1,7 @@
 import { Lotus } from "./Lotus";
 import { Art } from "./Art";
 import { Architecture } from "./Architecture";
-import { Video } from "./Video";
+import VideoPlayer from "../components/VideoPlayer";
 import { Education } from "./Education";
 import { Games } from "./Games";
 import { Advertising } from "./Advertising";
@@ -115,7 +115,7 @@ const Exhibits = () => {
 			</group>
 			<group position={EXHIBITS[EXHIBITS_INDEX.FILM_POSITION]}>
 				<Text
-					position-y={1.65}
+					position-y={1.85}
 					rotation-y={Math.PI}
 					fontSize={0.1}
 					color={0x333333}
@@ -123,7 +123,7 @@ const Exhibits = () => {
 				>
 					Film
 				</Text>
-				<Video position-y={1.3} />
+				<VideoPlayer rotation-y={Math.PI} position-y={1.4} />
 			</group>
 			<group position={EXHIBITS[EXHIBITS_INDEX.BOOK_POSITION]}>
 				<Text

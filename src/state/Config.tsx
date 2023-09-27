@@ -34,7 +34,7 @@ const EXHIBITS = [
 const EXHIBIT_TEXT = [
 	{
 		title: "Art",
-		description: `Imagine visiting a virtual art gallery where you can see all the pieces close up. 
+		description: `Would you like to visit a virtual art gallery where you can see all the pieces close up. 
 			You could finally see a Da Vinci or a Constable!`,
 	},
 	{
@@ -48,8 +48,16 @@ const EXHIBIT_TEXT = [
 		description: `Watch your favourite film in a large immersive environment, or use multiple 
 			video displays to inform and entertain your audience.`,
 	},
-	{ title: "Education", description: `Virtual Learning` },
-	{ title: "Games", description: "Shooters" },
+	{
+		title: "Education",
+		description: `Imagine a virtual learning space where you could conduct virtual experiments without breaking anything, or get taught by virtual 
+	experts from around the world or just have access to a vast array of information in an interactive environment.`,
+	},
+	{
+		title: "Games",
+		description:
+			"Play your favourite games inside a headset so it felt even more immersive!",
+	},
 	{ title: "Advertising", description: "Pepsi" },
 	{ title: "Health", description: "Virtual surgery" },
 	{ title: "Music", description: "Concerts" },
