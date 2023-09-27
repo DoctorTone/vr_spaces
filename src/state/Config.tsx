@@ -6,6 +6,8 @@ const SCENE = {
 	pointLight2: new THREE.Vector3(5, 4.25, 0),
 	PROXIMITY: 1.25,
 	MOVEMENT_SPEED: 2,
+	WORLD_DIRECTION: new THREE.Vector3(0, 0, -1),
+	ROTATION_SPEED: 0.25,
 };
 
 enum EXHIBITS_INDEX {
