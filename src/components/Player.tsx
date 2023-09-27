@@ -72,7 +72,7 @@ const Player = () => {
 	useFrame((state, delta) => {
 		const camera = state.camera;
 		// DEBUG
-		// console.log("Camera = ", camera.position);
+		console.log("Camera = ", camera.position);
 		lastCamPosition.copy(camera.position);
 		if (lockRef.current) {
 			velocity.x -= velocity.x * 10.0 * delta;

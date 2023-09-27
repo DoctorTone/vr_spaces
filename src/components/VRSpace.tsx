@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import { XR } from "@react-three/xr";
 import { Sky } from "@react-three/drei";
 import { SCENE } from "../state/Config";
@@ -9,6 +10,24 @@ import Player from "./Player";
 import VRNavigation from "./VRNavigation";
 
 const VRSpace = () => {
+	const [VRSupported, setVRSupported] = useState(false);
+
+	useEffect(() => {
+		// Determine whether to go VR or desktop
+		const isVRSupported = async () => {
+			if ("xr" in navigator) {
+				const supported = await navigator.xr!.isSessionSupported(
+					"immersive-vr"
+				);
+				if (supported) {
+					setVRSupported(true);
+				}
+			}
+		};
+
+		isVRSupported();
+	}, []);
+
 	return (
 		<>
 			<XR>
@@ -20,8 +39,7 @@ const VRSpace = () => {
 				<pointLight position={SCENE.pointLight2} />
 				<ShowRoom />
 				<Exhibits />
-				<Player />
-				<VRNavigation />
+				{VRSupported ? <VRNavigation /> : <Player />}
 			</XR>
 		</>
 	);

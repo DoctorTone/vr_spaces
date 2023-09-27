@@ -6,8 +6,6 @@ const SCENE = {
 	pointLight2: new THREE.Vector3(5, 4.25, 0),
 	PROXIMITY: 1.25,
 	MOVEMENT_SPEED: 2,
-	WORLD_DIRECTION: new THREE.Vector3(0, 0, -1),
-	ROTATION_SPEED: 0.25,
 };
 
 enum EXHIBITS_INDEX {
@@ -44,7 +42,7 @@ const EXHIBIT_TEXT = [
 		title: "Architecture",
 		description: `A 3D view can let you see all aspects of a house design, let you look around 
 			the interior or alter the layout. You could even plan a whole housing complex, 
-			determing the best place to situate everything.`,
+			determining the best place to situate everything.`,
 	},
 	{
 		title: "Film",
@@ -58,12 +56,12 @@ const EXHIBIT_TEXT = [
 	},
 	{
 		title: "Games",
-		description: `Play a whole new style of immersive games, or re-imagine some old favourites inside a VR headset! VR shooter coming soon!`,
+		description: `Play a whole new style of immersive games, or re-imagine some old favourites inside a VR headset! Look out for a VR shooter coming soon!`,
 	},
 	{
 		title: "Advertising",
-		description:
-			"Companies can promote as many products as they like in a large virtual space. They can appear as realistic as the real-world equivalent.",
+		description: `Companies can promote as many products as they like in a large virtual space. They can appear as realistic as the real-world equivalent, or rendered in 
+			any number of ways that better suit the product.`,
 	},
 	{
 		title: "Health",
