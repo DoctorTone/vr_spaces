@@ -11,7 +11,7 @@ const HUD = () => {
 	const callback = (state: VRState) => {
 		setExhibit(state.currentExhibit);
 	};
-	const sub = useStore.subscribe(callback);
+	useStore.subscribe(callback);
 
 	return (
 		<>

@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import * as THREE from "three";
 
 const VideoPlayer = (props: JSX.IntrinsicElements["group"]) => {

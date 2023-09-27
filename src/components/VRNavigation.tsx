@@ -7,13 +7,9 @@ import * as THREE from "three";
 const VRNavigation = () => {
 	const rightController = useController("right");
 	const player = useXR((state) => state.player);
-	const isPresenting = useXR((state) => state.isPresenting);
 	const tempVec = new THREE.Vector3();
 
-	useFrame((state, delta) => {
-		if (!isPresenting) {
-			return;
-		}
+	useFrame((_, delta) => {
 		if (!rightController) return;
 		const camera = player.children[0];
 
