@@ -5,8 +5,8 @@ const Mobile = () => {
 		<div id="mobile" className="panel">
 			<h1>Sorry!</h1>
 			<p>
-				The app isn't currently supported on mobile, bit it will be any time
-				soon, so keep coming back for updates
+				The app isn't currently supported on mobile, bit it will be soon, so
+				keep coming back for updates!
 			</p>
 		</div>
 	);

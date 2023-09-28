@@ -93,6 +93,11 @@ body {
 }
 
 @media (min-width: 1200px) {
+	#hud {
+		padding: 0 1.5% 0 1.5%;
+		left: 35%;
+		width: 30%;
+	}
 	#welcome {
 		left: 30%;
 		width: 40%;
