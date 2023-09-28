@@ -1,5 +1,3 @@
-import React from "react";
-
 const Mobile = () => {
 	return (
 		<div id="mobile" className="panel">
