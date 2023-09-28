@@ -30,7 +30,9 @@ const VRNavigation = () => {
 
 	useEffect(() => {
 		const elem = document.getElementById("welcome");
-		elem!.style.display = "none";
+		if (elem) {
+			elem!.style.display = "none";
+		}
 		player.position.set(-11, 0, -1);
 		player.rotation.y = -Math.PI / 2;
 	}, []);
