@@ -2,6 +2,7 @@ import * as THREE from "three";
 
 const SCENE = {
 	camPosition: new THREE.Vector3(-11, 1.7, -2),
+	VRStartPosition: new THREE.Vector3(-11, 0, -2),
 	pointLight1: new THREE.Vector3(-5, 4.25, 0),
 	pointLight2: new THREE.Vector3(5, 4.25, 0),
 	PROXIMITY: 1.25,
