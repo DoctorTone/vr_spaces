@@ -33,6 +33,8 @@ const VRNavigation = () => {
 		if (!rightController) return;
 		const camera = player.children[0];
 
+		if (!rightController.inputSource) return;
+
 		const [xPos, zPos] = [
 			rightController.inputSource!.gamepad!.axes[2],
 			rightController.inputSource!.gamepad!.axes[3],
