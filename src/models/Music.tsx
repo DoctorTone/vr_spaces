@@ -29,7 +29,7 @@ export function Music(props: JSX.IntrinsicElements["group"]) {
 				rotation={[-Math.PI / 2, 0, 0]}
 				scale={100}
 			/>
-			<Shadow position={[0, -500, -0]} scale={700} opacity={0.6} />
+			<Shadow position={[0, -525, -0]} scale={700} opacity={0.6} />
 		</group>
 	);
 }

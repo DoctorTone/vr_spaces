@@ -44,7 +44,7 @@ export function Education(props: JSX.IntrinsicElements["group"]) {
 				/>
 			</group>
 			<Shadow
-				position={[0, -0.15, -0.2]}
+				position={[0, -0.175, -0.2]}
 				scale={[0.475, 0.3, 0.1]}
 				opacity={0.7}
 				rotation-x={-Math.PI / 4}
