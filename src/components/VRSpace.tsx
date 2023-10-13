@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { XR } from "@react-three/xr";
+import { XR, Controllers } from "@react-three/xr";
 import { Sky } from "@react-three/drei";
 import { SCENE } from "../state/Config";
 import Floor from "../models/Floor";
@@ -34,6 +34,7 @@ const VRSpace = () => {
 	return (
 		<>
 			<XR>
+				<Controllers />
 				<Sky />
 				<Floor position-z={2} />
 				<Ground position-y={-0.1} />

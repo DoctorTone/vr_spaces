@@ -66,7 +66,11 @@ const VRNavigation = () => {
 	});
 
 	useEffect(() => {
-		const elem = document.getElementById("welcome");
+		let elem = document.getElementById("welcome");
+		if (elem) {
+			elem!.style.display = "none";
+		}
+		elem = document.getElementById("mobile");
 		if (elem) {
 			elem!.style.display = "none";
 		}
