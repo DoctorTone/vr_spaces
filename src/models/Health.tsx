@@ -7,7 +7,7 @@ Title: Health
 */
 
 import * as THREE from "three";
-import { useGLTF } from "@react-three/drei";
+import { useGLTF, Shadow } from "@react-three/drei";
 import { GLTF } from "three-stdlib";
 
 type GLTFResult = GLTF & {
@@ -31,6 +31,7 @@ export function Health(props: JSX.IntrinsicElements["group"]) {
 					scale={10}
 				/>
 			</group>
+			<Shadow position={[0, -0.3, -0]} scale={0.3} opacity={0.6} />
 		</group>
 	);
 }

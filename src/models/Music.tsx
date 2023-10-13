@@ -7,7 +7,7 @@ Title: Headphones Skullcandy Crusher Wireless
 */
 
 import * as THREE from "three";
-import { useGLTF } from "@react-three/drei";
+import { useGLTF, Shadow } from "@react-three/drei";
 import { GLTF } from "three-stdlib";
 
 type GLTFResult = GLTF & {
@@ -24,13 +24,12 @@ export function Music(props: JSX.IntrinsicElements["group"]) {
 	return (
 		<group {...props} dispose={null}>
 			<mesh
-				castShadow
-				receiveShadow
 				geometry={nodes.Skullcandy_Crusher_M_Skullcandy_Crusher_0.geometry}
 				material={materials.M_Skullcandy_Crusher}
 				rotation={[-Math.PI / 2, 0, 0]}
 				scale={100}
 			/>
+			<Shadow position={[0, -500, -0]} scale={700} opacity={0.6} />
 		</group>
 	);
 }
