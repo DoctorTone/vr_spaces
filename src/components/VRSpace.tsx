@@ -12,9 +12,6 @@ import VRNavigation from "./VRNavigation";
 const VRSpace = () => {
 	const [VRSupported, setVRSupported] = useState(false);
 
-	// DEBUG
-	console.log("VR sup = ", VRSupported);
-
 	useEffect(() => {
 		// Determine whether to go VR or desktop
 		const isVRSupported = async () => {

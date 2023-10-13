@@ -24,7 +24,7 @@ enum EXHIBITS_INDEX {
 const EXHIBITS = [
 	new THREE.Vector3(-10.5, 0, 3),
 	new THREE.Vector3(-9, 0, 3),
-	new THREE.Vector3(-7.5, 0, 3),
+	new THREE.Vector3(-7.5, -0.05, 3),
 	new THREE.Vector3(-6, 0, 3),
 	new THREE.Vector3(6, 0, 3),
 	new THREE.Vector3(7.5, 0, 3),
